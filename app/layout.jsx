@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <link rel="manifest" href="/manifest.json" />
-      <body className={inter.className}>
+      <body className={inter.className + " md:max-w-screen-sm mx-auto"}>
         {children}
         <BottomNav />
       </body>

@@ -15,7 +15,7 @@ export default function Step2({ dataPost, data }) {
         <p className="text-gray-500 text-center mb-6">
           We have sent an OTP to your phone number. Please enter the OTP below
         </p>
-        <InputOTP maxLength={6} name="otp" id="otp">
+        <InputOTP maxLength={6} name="otp" id="otp" className="text-white">
           <InputOTPGroup>
             <InputOTPSlot index={0} />
             <InputOTPSlot index={1} />

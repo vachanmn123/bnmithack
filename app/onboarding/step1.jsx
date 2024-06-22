@@ -14,7 +14,7 @@ export default function Step1({ dataPost }) {
         <input
           type="text"
           id="username"
-          className="border-2 border-gray-400 rounded-lg p-2"
+          className="border-2 border-gray-400 rounded-lg p-2 text-black"
           placeholder="Username"
         />
       </div>
@@ -23,7 +23,7 @@ export default function Step1({ dataPost }) {
         <input
           type="email"
           id="email"
-          className="border-2 border-gray-400 rounded-lg p-2"
+          className="border-2 border-gray-400 rounded-lg p-2 text-black"
           placeholder="Email"
         />
       </div>
@@ -32,7 +32,7 @@ export default function Step1({ dataPost }) {
         <input
           type="tel"
           id="phone"
-          className="border-2 border-gray-400 rounded-lg p-2"
+          className="border-2 border-gray-400 rounded-lg p-2 text-black"
           placeholder="Phone"
         />
       </div>
@@ -41,7 +41,7 @@ export default function Step1({ dataPost }) {
         <input
           type="number"
           id="age"
-          className="border-2 border-gray-400 rounded-lg p-2"
+          className="border-2 border-gray-400 rounded-lg p-2 text-black"
           placeholder="Age"
         />
       </div>

@@ -14,7 +14,7 @@ export default function BottomNav() {
     return null;
 
   return (
-    <div className="flex justify-between items-center bg-secondary fixed bottom-0 left-0 right-0 w-screen px-5 py-7">
+    <div className="flex justify-between items-center bg-secondary fixed bottom-0 left-0 right-0 w-screen px-5 py-7 md:max-w-screen-sm md:mx-auto">
       <Link href="/">
         <IoHomeOutline
           className={`text-3xl ${route === "/" ? "text-accent" : "text-white"}`}
@@ -23,7 +23,7 @@ export default function BottomNav() {
       <Link href="/courses">
         <IoBookOutline
           className={`text-3xl ${
-            route === "/courses" ? "text-accent" : "text-white"
+            route.includes("/course") ? "text-accent" : "text-white"
           }`}
         />
       </Link>
