@@ -1,83 +1,13 @@
 import { Progress } from "@/components/ui/progress";
 import Image from "next/image";
 import Link from "next/link";
+import { courses, newCourses } from "@/lib/data";
 
 const greetings = [
   "Good morning",
   "Good afternoon",
   "Good evening",
   "Good night",
-];
-
-const courses = [
-  {
-    id: "bsdasd-saddsf-dsfdg",
-    name: "Basic Engineering Mathematics",
-    description: "Learn Mathematics for Engineering",
-    image: "/images/subjects/mathematics.jpg",
-    progress: 50,
-  },
-  {
-    id: "csdasd-saddsf-dsfdg",
-    name: "Basic Engineering Physics",
-    description: "Learn Physics for Engineering",
-    image: "/images/subjects/physics.jpg",
-    progress: 10,
-  },
-  {
-    id: "dsdasd-saddsf-dsfdg",
-    name: "Programming in Python",
-    description: "Learn Python from scratch",
-    image: "/images/subjects/python.jpg",
-    progress: 30,
-  },
-  {
-    id: "esdasd-saddsf-dsfdg",
-    name: "Universal Human Values",
-    description: "Learn about Human Values",
-    image: "/images/subjects/values.jpg",
-    progress: 80,
-  },
-  {
-    id: "fsdasd-saddsf-dsfdg",
-    name: "Engineering Drawing",
-    description: "Learn Engineering Drawing",
-    image: "/images/subjects/drawing.jpg",
-    progress: 0,
-  },
-];
-
-const newCourses = [
-  {
-    id: "asdasd-saddsf-dsfdg",
-    name: "Basic Engineering Chemistry",
-    description: "Learn Chemistry for Engineering",
-    image: "/images/subjects/chemistry.jpg",
-  },
-  {
-    id: "asdasd-saddsf-dsfda",
-    name: "Basic Engineering Mechanics",
-    description: "Learn Mechanics for Engineering",
-    image: "/images/subjects/mechanics.jpg",
-  },
-  {
-    id: "asdasd-saddsf-dsfdb",
-    name: "Programming in C",
-    description: "Learn C Programming",
-    image: "/images/subjects/c.jpg",
-  },
-  {
-    id: "asdasd-saddsf-dsfdc",
-    name: "Engineering Graphics",
-    description: "Learn Engineering Graphics",
-    image: "/images/subjects/graphics.jpg",
-  },
-  {
-    id: "asdasd-saddsf-dsfdd",
-    name: "Engineering Mathematics",
-    description: "Learn Advanced Mathematics",
-    image: "/images/subjects/advanced-mathematics.jpg",
-  },
 ];
 
 export default function Home() {
@@ -127,8 +57,8 @@ export default function Home() {
             <div className="text-xl">Basic Engineering Physics</div>
             <small className="">Learn Physics for Engineering</small>
             <Progress value={10} />
-            <Link href={`/course/csdasd-saddsf-dsfdg`}>
-              <button className="bg-accent text-black rounded-md p-2">
+            <Link href={`/course/csdasd-saddsf-dsfdg`} className="w-full">
+              <button className="bg-accent text-black rounded-md p-2 w-full">
                 Resume Learning
               </button>
             </Link>
@@ -156,8 +86,8 @@ export default function Home() {
               <div className="text-xl">{course.name}</div>
               <small className="">{course.description}</small>
               <Progress value={course.progress} />
-              <Link href={`/course/${course.id}`}>
-                <button className="bg-accent text-black rounded-md p-2">
+              <Link href={`/course/${course.id}`} className="w-full">
+                <button className="bg-accent text-black rounded-md p-2 w-full">
                   Resume Learning
                 </button>
               </Link>
