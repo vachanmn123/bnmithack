@@ -9,6 +9,8 @@ export default function Topbar() {
   const router = useRouter();
   const hasBack = () => {
     if (path === "/") return false;
+    if (path === "/login") return false;
+    if (path === "/onboarding") return false;
     return true;
   };
   return (
