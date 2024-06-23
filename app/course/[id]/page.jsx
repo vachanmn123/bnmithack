@@ -53,8 +53,18 @@ export default function CoursePage({ params }) {
             Continue from where you left off
           </small>
         </div>
-        <div className="flex items-center justify-center w-full gap-5 h-64 bg-accent text-black p-5 rounded-md">
-          THIS WILL HAVE SOME INSANE COMPONENT JUST WAIT AND WATCH RAAHHHH
+        <div className="flex flex-col items-center justify-center w-full gap-5 bg-accent text-black p-5 rounded-md">
+          <h2 className="text-2xl font-bold font-secondary">
+            {chapters[1].name}
+          </h2>
+          <small className="text-sm text-secondary font-thin">
+            {chapters[1].description}
+          </small>
+          <Link href={`/course/${id}/chapter/${chapters[1].id}`}>
+            <button className="bg-black/50 text-black rounded-md p-2 w-full">
+              Continue
+            </button>
+          </Link>
         </div>
         <div>
           <h2 className="text-2xl font-bold">All Chapters</h2>

@@ -27,13 +27,13 @@ export default function BottomNav() {
           }`}
         />
       </Link>
-      <Link href="/search">
+      {/* <Link href="/search">
         <IoSearchOutline
           className={`text-3xl ${
             route === "/search" ? "text-accent" : "text-white"
           }`}
         />
-      </Link>
+      </Link> */}
       <Link href="/profile">
         <IoPersonCircleOutline
           className={`text-3xl ${
