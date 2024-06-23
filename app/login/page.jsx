@@ -27,9 +27,6 @@ export default function LoginPage() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen gap-6 mx-12">
-      <div className="w-screen fixed top-0 left-0 right-0 bg-secondary h-16 items-center justify-center flex px-4 py-5">
-        <h1 className="text-2xl text-white text-center">NeoMentor</h1>
-      </div>
       <h1 className="text-4xl font-bold">Login</h1>
       {step === 1 && (
         <>
