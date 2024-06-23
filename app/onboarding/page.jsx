@@ -71,7 +71,7 @@ export default function OnboardingPage() {
           {step === 4 && (
             <>
               <h2 className="text-3xl font-bold text-center">
-                Welcome to NeoMentor
+                Setting up your account...
               </h2>
               <p className="text-gray-500 text-center mb-6">
                 Give us a moment to set up your brand new NeoMentor Account!

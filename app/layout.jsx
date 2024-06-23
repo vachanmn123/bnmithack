@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import BottomNav from "./BottomNav";
+import Topbar from "./Topbar";
+import AnimatedLayout from "./AnimatedLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +23,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <link rel="manifest" href="/manifest.json" />
       <body className={inter.className + " md:max-w-screen-sm mx-auto"}>
-        {children}
+        <Topbar />
+        <AnimatedLayout>{children}</AnimatedLayout>
         <BottomNav />
       </body>
     </html>
