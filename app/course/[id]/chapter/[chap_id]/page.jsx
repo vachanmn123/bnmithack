@@ -1,12 +1,18 @@
 "use client";
 import React, { useEffect } from "react";
-import { chapters } from "@/lib/data";
+import { chapters, notes } from "@/lib/data";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Select from "react-select";
 import Image from "next/image";
+import { IoArrowForward } from "react-icons/io5";
+import Link from "next/link";
 
 const getChapter = (chapId) => {
   return chapters.find((chap) => chap.id === chapId);
+};
+
+const getNotes = (chapId) => {
+  return notes.filter((note) => note.chapter === chapId);
 };
 
 const presenterVideos = {
@@ -33,6 +39,7 @@ const presenterVideos = {
 export default function ChapterPage({ params }) {
   const { id, chap_id } = params;
   const chapter = getChapter(chap_id);
+  const notes = getNotes(chap_id);
   const [curPresenter, setCurPresenter] = React.useState({
     id: "1",
     chapter: "1",
@@ -116,8 +123,25 @@ export default function ChapterPage({ params }) {
             ))}
           </div>
         </TabsContent>
-        <TabsContent value="notes">Change your password here.</TabsContent>
-        <TabsContent value="help">Change your password here.</TabsContent>
+        <TabsContent value="notes">
+          <h3 className="text-xl font-bold mt-3 mx-2">Chapter Notes</h3>
+          <div className="flex flex-col gap-5 mx-3 mt-5">
+            {notes.map((note) => {
+              return (
+                <Link
+                  key={note.id}
+                  href={`/course/${id}/chapter/${chap_id}/note/${note.id}`}
+                  className="flex flex-col relative gap-2 p-2 rounded-md bg-secondary hover:bg-accent hover:text-black transition-all duration-100 cursor-pointer"
+                >
+                  <h4 className="text-lg font-bold">{note.title}</h4>
+                  <p>{note.content}</p>
+                  <IoArrowForward className="absolute right-2 top-[45%]" />
+                </Link>
+              );
+            })}
+          </div>
+        </TabsContent>
+        <TabsContent value="help">AI CHATBOT HERE</TabsContent>
       </Tabs>
     </div>
   );

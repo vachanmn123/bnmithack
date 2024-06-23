@@ -54,10 +54,16 @@ export default function Home() {
               height={1080}
               className="rounded-md w-full aspect-video"
             />
-            <div className="text-xl">Basic Engineering Physics</div>
-            <small className="">Learn Physics for Engineering</small>
-            <Progress value={10} />
-            <Link href={`/course/csdasd-saddsf-dsfdg`} className="w-full">
+            <div className="text-xl">Chapter 1: Introduction to Physics</div>
+            <small className="">Basic Engineering Physics</small>
+            <div class="grid grid-cols-10 gap-1 items-center">
+              <Progress value={10} className="col-span-9" />
+              <span className="col-span-1 text-right">10%</span>
+            </div>
+            <Link
+              href={`/course/csdasd-saddsf-dsfdg/chapter/csdasd-saddsf-dsfdg-1`}
+              className="w-full"
+            >
               <button className="bg-accent text-black rounded-md p-2 w-full">
                 Resume Learning
               </button>
@@ -85,7 +91,10 @@ export default function Home() {
               />
               <div className="text-xl">{course.name}</div>
               <small className="">{course.description}</small>
-              <Progress value={course.progress} />
+              <div class="grid grid-cols-10 gap-1 items-center">
+                <Progress value={course.progress} className="col-span-9" />
+                <div className="col-span-1 text-right">{course.progress}%</div>
+              </div>
               <Link href={`/course/${course.id}`} className="w-full">
                 <button className="bg-accent text-black rounded-md p-2 w-full">
                   Resume Learning
