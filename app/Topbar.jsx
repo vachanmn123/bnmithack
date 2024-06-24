@@ -3,6 +3,7 @@ import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 import { IoIosArrowRoundBack, IoIosHelpCircleOutline } from "react-icons/io";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Topbar() {
   const path = usePathname();
@@ -21,6 +22,13 @@ export default function Topbar() {
           onClick={() => router.back()}
         />
       )}
+      <Image
+        src="/images/icons/icon-512x512.png"
+        alt="NeoMentor"
+        width={48}
+        height={48}
+        className="h-12 w-12"
+      />
       <h1 className="text-2xl text-white text-center">NeoMentor</h1>
       <Link
         href="/support"
